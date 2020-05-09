@@ -1,10 +1,11 @@
-# covid
+# COVID-19 Tracker
 
-A new Flutter project.
+A Flutter based project to track COVID-19 in your area and get latest news about the virus.
+(Project incomplete)
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Run the main.dart file on IDE
 
 A few resources to get you started if this is your first Flutter project:
 
