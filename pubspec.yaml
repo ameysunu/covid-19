@@ -27,6 +27,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  url_launcher: ^3.0.3
 
 
 # For information on the generic Dart part of this file, see the
@@ -64,6 +65,10 @@ flutter:
     - family: Source Sans Pro
       fonts:
         - asset: fonts/SourceSansPro-Regular.ttf
+
+    - family: SF Collegiate
+      fonts:
+        - asset: fonts/CollegiateBlackFLF.ttf
 
   #
   # For details regarding fonts from package dependencies,

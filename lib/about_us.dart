@@ -16,9 +16,9 @@ class AboutUs extends StatelessWidget {
                     backgroundImage: AssetImage('images/IMG_2590.jpeg')
                   ),
                 ),
-               Text('Amey Sunu', 
+               Text('AMEY SUNU', 
                 style: TextStyle(
-                fontFamily: 'Pacifico',
+                fontFamily: 'Source Sans Pro',
                   fontSize: 40.0, 
                   color: Colors.white,
                   fontWeight: FontWeight.bold
@@ -33,8 +33,9 @@ class AboutUs extends StatelessWidget {
                   color: Colors.grey[500]
                 ),
                 ),
+                
               ]
-              ),
+            ),
         ),
       ),
     );
