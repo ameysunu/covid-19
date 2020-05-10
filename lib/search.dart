@@ -29,10 +29,12 @@ class Search extends StatelessWidget {
                    ),
                  ),
                    
-                   Text("----------or----------",
+                   Text("or",
+                   textAlign: TextAlign.center,
                    style: TextStyle(
-                     color: Colors.white,
-                   fontSize: 25.0),
+                   color: Colors.white,
+                   fontSize: 25.0,
+                   ),
                    ),
                    InkWell(
                     child: Card(            
