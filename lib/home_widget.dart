@@ -39,7 +39,7 @@ class _HomePageState extends State<HomePage> {
             style: TextStyle(color: Colors.white),),
          ),
          BottomNavigationBarItem(
-           icon: Icon(Icons.home,
+           icon: Icon(Icons.whatshot,
            color: Colors.white),
            title: Text('About Us',
            style: TextStyle(color: Colors.white),)
