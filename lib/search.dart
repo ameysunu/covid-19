@@ -9,7 +9,6 @@ class Search extends StatelessWidget {
         backgroundColor: Colors.black,
         body: SafeArea(
             child: Column(
-              
               children: <Widget>[
                  Card(                 //Card1
                   color:Colors.grey[900],

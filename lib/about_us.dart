@@ -8,23 +8,36 @@ class AboutUs extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.black,
         body: SafeArea(
-            child: Column(
+            child: Row(
              children: <Widget>[
-                Center(
+                Padding(
+                  padding: const EdgeInsets.all(16.0),
                   child: CircleAvatar(
-                    radius: 50.0,
-                    backgroundImage: AssetImage('images/IMG_2590.jpeg')
+                        radius: 30.0,
+                        backgroundImage: AssetImage('images/IMG_2590.jpeg')
+                      ),
+                ),
+               Padding(
+                 padding: const EdgeInsets.all(16.0),
+                 child: Text('AMEY SUNU', 
+                  style: TextStyle(
+                  fontFamily: 'Source Sans Pro',
+                    fontSize: 20.0, 
+                    letterSpacing: 2.5,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold
                   ),
-                ),
-               Text('AMEY SUNU', 
-                style: TextStyle(
-                fontFamily: 'Source Sans Pro',
-                  fontSize: 40.0, 
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold
-                ),
-                ),
-                Text('FLUTTER DEVELOPER',
+                  ),
+               ),
+              ]
+            ),
+        ),
+      ),
+    );
+  }
+}
+/*
+ Text('FLUTTER DEVELOPER',
                 style: TextStyle(
                 fontFamily: 'Source Sans Pro',
                   fontSize: 20.0,
@@ -33,11 +46,4 @@ class AboutUs extends StatelessWidget {
                   color: Colors.grey[500]
                 ),
                 ),
-                
-              ]
-            ),
-        ),
-      ),
-    );
-  }
-}
+                */
