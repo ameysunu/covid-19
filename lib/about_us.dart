@@ -13,7 +13,7 @@ class AboutUs extends StatelessWidget {
               [
               InkWell(
               child: Padding(
-              padding: const EdgeInsets.all(16.0),
+              padding: const EdgeInsets.all(17.0),
               child: ListTile(
                 title: Text('AMEY SUNU',
                 style: TextStyle(
@@ -44,7 +44,7 @@ class AboutUs extends StatelessWidget {
       ),
        InkWell(
               child: Padding(
-              padding: const EdgeInsets.all(16.0),
+              padding: const EdgeInsets.all(17.0),
               child: ListTile(
                 title: Text('IPSHITA JOSHI',
                 style: TextStyle(
