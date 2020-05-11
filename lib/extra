@@ -1,16 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:geolocator/geolocator.dart';
-class Search extends StatefulWidget{
-  @override
-  _SearchState createState() => _SearchState();
-}
-
-class _SearchState extends State<Search>{
-  final Geolocator geolocator = Geolocator()..forceAndroidLocationManager;
-  Position _currentPosition;
-  String _currentAddress;
-
+class Search extends StatelessWidget {
+  //Position _currentPosition;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -28,9 +20,9 @@ class _SearchState extends State<Search>{
                      prefixIcon: Icon(Icons.search,
                      color: Colors.grey[600]),
                    enabledBorder: new OutlineInputBorder(borderRadius: new BorderRadius.horizontal(),
-                   
+
                      borderSide: new BorderSide(
-                            color: Colors.white                            
+                            color: Colors.white
                           ),
                         ),
                    hintText: 'Search for a country/city',
@@ -38,7 +30,7 @@ class _SearchState extends State<Search>{
                    ),
                    ),
                  ),
-                   
+
                    Text("or",
                    textAlign: TextAlign.center,
                    style: TextStyle(
@@ -47,62 +39,47 @@ class _SearchState extends State<Search>{
                    ),
                    ),
                    InkWell(
-                    child: Card(            
+                    child: Card(
                     color:Colors.grey[900],
                     margin: EdgeInsets.symmetric(vertical: 12.0, horizontal:12.0),
                     child:ListTile(
                       leading: Icon(Icons.location_searching ,
                        color: Colors.white,
                        ),
-
                         title: Text('get your location for updates',
                         textAlign: TextAlign.center,
                          style: TextStyle(color: Colors.white,
                          fontSize: 20.0,
-                         
+
                          ),
                          ),
-                         onTap: ()/**/{
-                          _getCurrentLocation();/**/
+                         onTap: ()async{
+                           _getCurrentLocation();
                          },
-              
+
                     ),
                     ),
-                   ),
+                   )
+
               ]
               ),
         ),
       ),
     );
-
   }
 
-_getCurrentLocation() {
-  geolocator.getCurrentPosition(desiredAccuracy: LocationAccuracy.low).then((Position position) {
-    setState(() {
-      _currentPosition = position;
-    });
-    print(position.longitude);
-    _getAddressFromLatLng();
-  }).catchError((e) {
-    print(e);
-  });
-}
+  _getCurrentLocation() {
+    final Geolocator geolocator = Geolocator()..forceAndroidLocationManager;
 
-  _getAddressFromLatLng() async {
-    try {
-      List<Placemark> p = await geolocator.placemarkFromCoordinates(
-          _currentPosition.latitude, _currentPosition.longitude);
-
-      Placemark place = p[0];
-
+    geolocator
+        .getCurrentPosition(desiredAccuracy: LocationAccuracy.best)
+        .then((Position position) {
       setState(() {
-        _currentAddress =
-        "${place.locality}, ${place.postalCode}, ${place.country}";
+        _currentPosition = position;
       });
-    } catch (e) {
+    }).catchError((e) {
       print(e);
-    }
+    });
   }
 
 }
