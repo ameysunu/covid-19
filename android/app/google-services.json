@@ -1,35 +1,66 @@
 {
   "project_info": {
+<<<<<<< HEAD
     "project_number": "310881581261",
     "firebase_url": "https://covid-a97ba.firebaseio.com",
     "project_id": "covid-a97ba",
     "storage_bucket": "covid-a97ba.appspot.com"
+=======
+    "project_number": "561691176696",
+    "firebase_url": "https://covid-19-1b8d4.firebaseio.com",
+    "project_id": "covid-19-1b8d4",
+    "storage_bucket": "covid-19-1b8d4.appspot.com"
+>>>>>>> 671d7d6dbb2dd78ee4253fa616dbd3d89682908c
   },
   "client": [
     {
       "client_info": {
+<<<<<<< HEAD
         "mobilesdk_app_id": "1:310881581261:android:949b3b5018dcb2443dd184",
+=======
+        "mobilesdk_app_id": "1:561691176696:android:7926b4b8d50096e249150d",
+>>>>>>> 671d7d6dbb2dd78ee4253fa616dbd3d89682908c
         "android_client_info": {
           "package_name": "com.example.covid"
         }
       },
       "oauth_client": [
         {
+<<<<<<< HEAD
           "client_id": "310881581261-fiamto99f5qjgk7klpb79eadev13pd4d.apps.googleusercontent.com",
+=======
+          "client_id": "561691176696-4i7dcveqj83t2b55q0c1nkqk5ji33l6k.apps.googleusercontent.com",
+>>>>>>> 671d7d6dbb2dd78ee4253fa616dbd3d89682908c
           "client_type": 3
         }
       ],
       "api_key": [
         {
+<<<<<<< HEAD
           "current_key": "AIzaSyB1I8uP0gyUva_ETAww9vYDOAA9t3zaCcc"
+=======
+          "current_key": "AIzaSyAMYXULXjGY0XfwG1XgZ9RVFbET_OZ4kAM"
+>>>>>>> 671d7d6dbb2dd78ee4253fa616dbd3d89682908c
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
+<<<<<<< HEAD
               "client_id": "310881581261-fiamto99f5qjgk7klpb79eadev13pd4d.apps.googleusercontent.com",
               "client_type": 3
+=======
+              "client_id": "561691176696-4i7dcveqj83t2b55q0c1nkqk5ji33l6k.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "561691176696-mnm62cqr3djg8fgko5m1p2itfrdl8uiq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.covid"
+              }
+>>>>>>> 671d7d6dbb2dd78ee4253fa616dbd3d89682908c
             }
           ]
         }
