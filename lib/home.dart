@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-class News extends StatelessWidget {
+class Home extends StatelessWidget {
   final int number = 911;
    void call(int number) => launch("tel:$number");
   @override

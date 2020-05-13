@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'news.dart';
+import  'package:flutter/cupertino.dart';
+import 'home.dart';
 import 'search.dart';
 import 'about_us.dart';
-
+import 'news/news.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -12,8 +13,9 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
   final List<Widget> _widgetOptions = [
-    News(),
+    Home(),
     Search(),
+    NewsApp(),
     AboutUs(),
   ]; 
 
@@ -22,6 +24,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold( 
       backgroundColor: Colors.black,
        bottomNavigationBar: BottomNavigationBar(
+         type: BottomNavigationBarType.fixed,
          currentIndex: _selectedIndex,
          showSelectedLabels: true,
          backgroundColor: Colors.grey[900],
@@ -38,12 +41,18 @@ class _HomePageState extends State<HomePage> {
            title: new Text('Search',
             style: TextStyle(color: Colors.white),),
          ),
+          BottomNavigationBarItem(
+           icon: Icon(CupertinoIcons.news,
+           color: Colors.white),
+           title: Text('News',
+           style: TextStyle(color: Colors.white),)
+         ),
          BottomNavigationBarItem(
            icon: Icon(Icons.whatshot,
            color: Colors.white),
            title: Text('About Us',
            style: TextStyle(color: Colors.white),)
-         )
+         ),
        ],
        onTap: (index){
          setState(() {
