@@ -14,6 +14,18 @@ class NewsFeedPage extends StatelessWidget {
 
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
+    String title;
+     if (text == 1) {
+      title = "Bussiness";
+    } else if (text == 2) {
+      title = "Bitcoin";
+    } else if (text == 3) {
+      title = "TechCrunch";
+    } else if (text == 4) {
+      title = "Apple";
+    } else if (text == 5) {
+      title = "Well Street";
+    }
    
     return Scaffold(
       backgroundColor: Colors.black,
@@ -47,7 +59,23 @@ class NewsFeedPage extends StatelessWidget {
 
 Future<List<News>> fatchNews(http.Client client, id) async {
   String url;
-  url = Constant.base_url +"everything?q=COVID-19&from=2020-05-12&sortBy=popularity&apiKey=6379d43c48584ba0917b7d655523eb8e"; 
+  if (id == 1) {
+    url = Constant.base_url +
+        "top-headlines?country=us&category=business&apiKey=6379d43c48584ba0917b7d655523eb8e";
+  } else if (id == 2) {
+    url = Constant.base_url +
+        "everything?q=stocks&sortBy=publishedAt&apiKey=6379d43c48584ba0917b7d655523eb8e";
+  } else if (id == 3) {
+    url = Constant.base_url +
+        "everything?q=technology&from=2020-05-13&to=2020-05-14&sortBy=popularity&apiKey=6379d43c48584ba0917b7d655523eb8e";
+  } else if (id == 4) {
+    url = Constant.base_url +
+        "everything?q=health&from=2020-05-10&to=2020-05-14&sortBy=popularity&apiKey=6379d43c48584ba0917b7d655523eb8e";
+  } else if (id == 5) {
+    url =
+        Constant.base_url + "everything?domains=wsj.com&apiKey=6379d43c48584ba0917b7d655523eb8e";
+  }
+  // url = Constant.base_url +"everything?q=COVID-19&from=2020-05-12&sortBy=popularity&apiKey=6379d43c48584ba0917b7d655523eb8e"; 
   final response = await client.get(url);
   return compute(parsenews, response.body);
 

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'newsfeed.dart';
 import 'description.dart';
+import 'newshome.dart';
 
 void main() => runApp(NewsApp());
 
@@ -17,7 +18,7 @@ class NewsApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
       backgroundColor: Colors.black,
-      body: NewsFeedPage(null)
+      body: HomePage(),
       ),
       routes: routes,
     );
