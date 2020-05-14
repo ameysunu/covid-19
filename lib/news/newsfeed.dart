@@ -16,16 +16,14 @@ class NewsFeedPage extends StatelessWidget {
     var width = MediaQuery.of(context).size.width;
     String title;
      if (text == 1) {
-      title = "Bussiness";
+      title = "Business";
     } else if (text == 2) {
-      title = "Bitcoin";
+      title = "Stocks";
     } else if (text == 3) {
-      title = "TechCrunch";
+      title = "Technology";
     } else if (text == 4) {
-      title = "Apple";
-    } else if (text == 5) {
-      title = "Well Street";
-    }
+      title = "Health";
+    } 
    
     return Scaffold(
       backgroundColor: Colors.black,
@@ -71,10 +69,7 @@ Future<List<News>> fatchNews(http.Client client, id) async {
   } else if (id == 4) {
     url = Constant.base_url +
         "everything?q=health&from=2020-05-10&to=2020-05-14&sortBy=popularity&apiKey=6379d43c48584ba0917b7d655523eb8e";
-  } else if (id == 5) {
-    url =
-        Constant.base_url + "everything?domains=wsj.com&apiKey=6379d43c48584ba0917b7d655523eb8e";
-  }
+  } 
   // url = Constant.base_url +"everything?q=COVID-19&from=2020-05-12&sortBy=popularity&apiKey=6379d43c48584ba0917b7d655523eb8e"; 
   final response = await client.get(url);
   return compute(parsenews, response.body);
