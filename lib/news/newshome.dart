@@ -176,6 +176,150 @@ class HomePage extends StatelessWidget {
                           },
                         ),
                       ),
+                       new Card(
+                        color: Colors.grey[900],
+                        elevation: 3.0,
+                        child: new GestureDetector(
+                          child: new Container(
+                            child: new Column(
+                              children: <Widget>[
+                                 Center(
+                                   child: Padding(
+                                     padding: const EdgeInsets.all(16.0),
+                                     child: Icon(Icons.pool,
+                                     size: 100.0,color: Colors.white,),
+                                   ),
+                                 ),
+                                new Padding(
+                                  padding: EdgeInsets.all(8.0),
+                                  child: Text("Sports",
+                                      style: TextStyle(
+                                          fontSize: 20.0, color: Colors.white),
+                                      textAlign: TextAlign.center),
+                                ),
+                              ],
+                            ),
+                          ),
+                          onTap: () {
+                            var id = 5;
+                            Navigator.push(
+                              context,
+                              new MaterialPageRoute(
+                                builder: (BuildContext context) =>
+                                    new NewsFeedPage(id),
+                              ),
+                            );
+                          },
+                        ),
+                      ),
+                       new Card(
+                        color: Colors.grey[900],
+                        elevation: 3.0,
+                        child: new GestureDetector(
+                          child: new Container(
+                            child: new Column(
+                              children: <Widget>[
+                                 Center(
+                                   child: Padding(
+                                     padding: const EdgeInsets.all(16.0),
+                                     child: Icon(Icons.flight,
+                                     size: 100.0,color: Colors.white,),
+                                   ),
+                                 ),
+                                new Padding(
+                                  padding: EdgeInsets.all(8.0),
+                                  child: Text("Travel",
+                                      style: TextStyle(
+                                          fontSize: 20.0, color: Colors.white),
+                                      textAlign: TextAlign.center),
+                                ),
+                              ],
+                            ),
+                          ),
+                          onTap: () {
+                            var id = 6;
+                            Navigator.push(
+                              context,
+                              new MaterialPageRoute(
+                                builder: (BuildContext context) =>
+                                    new NewsFeedPage(id),
+                              ),
+                            );
+                          },
+                        ),
+                      ),
+                       new Card(
+                        color: Colors.grey[900],
+                        elevation: 3.0,
+                        child: new GestureDetector(
+                          child: new Container(
+                            child: new Column(
+                              children: <Widget>[
+                                 Center(
+                                   child: Padding(
+                                     padding: const EdgeInsets.all(16.0),
+                                     child: Icon(Icons.public,
+                                     size: 100.0,color: Colors.white,),
+                                   ),
+                                 ),
+                                new Padding(
+                                  padding: EdgeInsets.all(8.0),
+                                  child: Text("World News",
+                                      style: TextStyle(
+                                          fontSize: 20.0, color: Colors.white),
+                                      textAlign: TextAlign.center),
+                                ),
+                              ],
+                            ),
+                          ),
+                          onTap: () {
+                            var id = 7;
+                            Navigator.push(
+                              context,
+                              new MaterialPageRoute(
+                                builder: (BuildContext context) =>
+                                    new NewsFeedPage(id),
+                              ),
+                            );
+                          },
+                        ),
+                      ),
+                       new Card(
+                        color: Colors.grey[900],
+                        elevation: 3.0,
+                        child: new GestureDetector(
+                          child: new Container(
+                            child: new Column(
+                              children: <Widget>[
+                                 Center(
+                                   child: Padding(
+                                     padding: const EdgeInsets.all(16.0),
+                                     child: Icon(Icons.language,
+                                     size: 100.0,color: Colors.white,),
+                                   ),
+                                 ),
+                                new Padding(
+                                  padding: EdgeInsets.all(8.0),
+                                  child: Text("China",
+                                      style: TextStyle(
+                                          fontSize: 20.0, color: Colors.white),
+                                      textAlign: TextAlign.center),
+                                ),
+                              ],
+                            ),
+                          ),
+                          onTap: () {
+                            var id = 8;
+                            Navigator.push(
+                              context,
+                              new MaterialPageRoute(
+                                builder: (BuildContext context) =>
+                                    new NewsFeedPage(id),
+                              ),
+                            );
+                          },
+                        ),
+                      ),
                     ],
                   ),
                 ),

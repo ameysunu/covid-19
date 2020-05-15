@@ -24,7 +24,18 @@ class NewsFeedPage extends StatelessWidget {
     } else if (text == 4) {
       title = "Health";
     } 
-   
+    else if (text == 5) {
+      title = "Sports";
+    }
+    else if (text == 6) {
+      title = "Travel";
+    }
+    else if (text == 7) {
+      title = "World News";
+    }
+    else if (text == 8) {
+      title = "China";
+    }
     return Scaffold(
       backgroundColor: Colors.black,
       body: new SafeArea(
@@ -65,11 +76,24 @@ Future<List<News>> fatchNews(http.Client client, id) async {
         "everything?q=stocks&sortBy=publishedAt&apiKey=6379d43c48584ba0917b7d655523eb8e";
   } else if (id == 3) {
     url = Constant.base_url +
-        "everything?q=technology&from=2020-05-13&to=2020-05-14&sortBy=popularity&apiKey=6379d43c48584ba0917b7d655523eb8e";
+        "everything?q=technology&from=2020-05-13&to=2020-05-15&sortBy=popularity&apiKey=6379d43c48584ba0917b7d655523eb8e";
   } else if (id == 4) {
     url = Constant.base_url +
-        "everything?q=health&from=2020-05-10&to=2020-05-14&sortBy=popularity&apiKey=6379d43c48584ba0917b7d655523eb8e";
+        "everything?q=health&from=2020-05-10&to=2020-05-15&sortBy=popularity&apiKey=6379d43c48584ba0917b7d655523eb8e";
+  } else if (id == 5) {
+    url = Constant.base_url +
+        "everything?q=sports&from=2020-05-10&to=2020-05-15&sortBy=popularity&apiKey=6379d43c48584ba0917b7d655523eb8e";
+  } else if (id == 6) {
+    url = Constant.base_url +
+        "everything?q=travel&from=2020-05-10&to=2020-05-15&sortBy=popularity&apiKey=6379d43c48584ba0917b7d655523eb8e";
+  } else if (id == 7) {
+    url = Constant.base_url +
+        "everything?q=world&from=2020-05-10&to=2020-05-15&sortBy=popularity&apiKey=6379d43c48584ba0917b7d655523eb8e";
+  } else if (id == 8) {
+    url = Constant.base_url +
+        "everything?q=china&from=2020-05-10&to=2020-05-15&sortBy=popularity&apiKey=6379d43c48584ba0917b7d655523eb8e";
   } 
+
   // url = Constant.base_url +"everything?q=COVID-19&from=2020-05-12&sortBy=popularity&apiKey=6379d43c48584ba0917b7d655523eb8e"; 
   final response = await client.get(url);
   return compute(parsenews, response.body);
